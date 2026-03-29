@@ -190,17 +190,15 @@ def get_addresses(
 
 
 # code-mode
-from code_mode import execute_code as _execute_code
+from code_mode import make_execute_code
 
 @mcp.tool(description=(
     "Write and execute Python code that orchestrates faker tools. "
     "Use this instead of calling tools one by one. "
-    "Available functions: get_persons(), get_companies(), get_products(), get_books(), get_addresses(). "
-    "Each accepts quantity, locale, seed. "
     "Must define def run(): or async def run(): and return the result."
 ))
 def execute_code(code: Annotated[str, Field(description="Python code with a run() function.")]) -> dict:
-    return _execute_code(code)
+    return make_execute_code(mcp)(code)
 # ── Entry point ───────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     
