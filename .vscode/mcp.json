@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "faker-api": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "server.py"],
+      "cwd": "${workspaceFolder}"
+    }
+  }
+}
