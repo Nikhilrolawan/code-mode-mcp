@@ -79,7 +79,6 @@ mcp = FastMCP(
     ),
 )
 
-
 # ── Tool: persons ─────────────────────────────────────────────────────────────
 
 class PersonsResult(BaseModel):

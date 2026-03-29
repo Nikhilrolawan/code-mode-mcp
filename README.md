@@ -1,3 +1,4 @@
+# Do not clone this repo and use code currently it's in testing mode
 # code-mode-mcp
 
 A minimal **FastMCP** server that exposes [FakerAPI.it](https://fakerapi.it) endpoints as typed MCP tools,
